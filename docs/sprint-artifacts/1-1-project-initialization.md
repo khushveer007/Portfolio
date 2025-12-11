@@ -1,6 +1,6 @@
 # Story 1.1: Project Initialization
 
-Status: Ready for Review
+Status: Done
 
 ## Story
 
@@ -34,7 +34,7 @@ Status: Ready for Review
 
 - [/] Initialize Next.js Project (AC: 1-7)
   - [x] Run `npx create-next-app@latest ./ --typescript --tailwind --eslint --app --src-dir --turbopack --import-alias "@/*"`
-  - [x] Verify `next.config.ts`, `tsconfig.json`, `tailwind.config.ts` exist
+  - [x] Verify `next.config.ts`, `tsconfig.json` exist (Tailwind v4 uses CSS imports)
   - [x] Verify `src/app` structure
 - [x] Install Additional Dependencies (AC: 8)
   - [x] Run `npm install framer-motion resend @react-email/components`
@@ -87,6 +87,8 @@ Status: Ready for Review
 - [x] Initialization complete
 - [x] Structure verified
 - [x] Dev server running
+- [x] [AI-Review] Initialized Git repository
+- [x] [AI-Review] Corrected Tailwind config verification task
 
 ### File List
 - package.json

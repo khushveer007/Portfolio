@@ -1,6 +1,6 @@
 # Story 1.4: Hero Section
 
-Status: ready-for-dev
+Status: Done
 
 ## Story
 
@@ -30,23 +30,24 @@ Status: ready-for-dev
 
 ## Tasks / Subtasks
 
-- [ ] Implement Hero Component Structure (AC: 1, 3, 4, 5, 8, 9, 12, 13)
-    - [ ] Create `src/components/sections/Hero.tsx`
-    - [ ] Implement semantic HTML structure (`<section>`, `<h1>`, etc.)
-    - [ ] Apply responsive layout and typography using Tailwind
-- [ ] Implement Hero Animations (AC: 6, 7, 14)
-    - [ ] Convert component to Client Component (`'use client'`)
-    - [ ] Import `fadeInUp` and `staggerContainer` from `@/lib/motion`
-    - [ ] Apply `motion` components with `initial`, `animate`, `variants`
-- [ ] Implement Reduced Motion Support (AC: 11)
-    - [ ] Use `useReducedMotion` hook from `src/hooks/useReducedMotion`
-    - [ ] Conditionally disable animations or use static states if reduced motion is preferred
-- [ ] Verify Responsiveness and Accessibility (AC: 10, 12)
-    - [ ] Verify h1 scaling on mobile/tablet/desktop
-    - [ ] Verify color contrast and accessibility
-- [ ] Create Unit Tests
-    - [ ] Create `src/components/sections/Hero.test.tsx`
-    - [ ] Test component rendering and accessibility (headings present)
+- [x] Implement Hero Component Structure (AC: 1, 3, 4, 5, 8, 9, 12, 13)
+    - [x] Create `src/components/sections/Hero.tsx`
+    - [x] Implement semantic HTML structure (`<section>`, `<h1>`, etc.)
+    - [x] Apply responsive layout and typography using Tailwind
+- [x] Implement Hero Animations (AC: 6, 7, 14)
+    - [x] Convert component to Client Component (`'use client'`)
+    - [x] Import `fadeInUp` and `staggerContainer` from `@/lib/motion`
+    - [x] Apply `motion` components with `initial`, `animate`, `variants`
+- [x] Implement Reduced Motion Support (AC: 11)
+    - [x] Use `useReducedMotion` hook from `src/hooks/useReducedMotion`
+    - [x] Conditionally disable animations or use static states if reduced motion is preferred
+- [x] Verify Responsiveness and Accessibility (AC: 10, 12)
+    - [x] Verify h1 scaling on mobile/tablet/desktop
+    - [x] Verify color contrast and accessibility
+- [x] Create Unit Tests
+    - [x] Create `src/components/sections/Hero.test.tsx`
+    - [x] Test component rendering and accessibility (headings present)
+
 
 ## Dev Notes
 
@@ -97,8 +98,16 @@ Status: ready-for-dev
 ### Completion Notes List
 
 - [x] Ultimate context engine analysis completed - comprehensive developer guide created
+- [x] Implemented Hero component with Framer Motion animations
+- [x] Added Reduced Motion support
+- [x] Created unit tests and fixed Vitest DOM setup
+
 
 ### File List
 
 - src/components/sections/Hero.tsx
 - src/components/sections/Hero.test.tsx
+- src/app/page.tsx
+- vitest.setup.ts
+- vitest.config.ts
+

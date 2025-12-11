@@ -1,6 +1,6 @@
 # Story 1.3: Animation System Foundation
 
-Status: ready-for-dev
+Status: Done
 
 ## Story
 
@@ -25,21 +25,35 @@ Status: ready-for-dev
 
 ## Tasks / Subtasks
 
-- [ ] Implement Motion Variants (AC: 3-7, 12)
-  - [ ] Create `src/lib/motion.ts`
-  - [ ] Implement and export `fadeInUp` variant
-  - [ ] Implement and export `staggerContainer` variant
-  - [ ] Implement and export `scaleOnHover` variant
-  - [ ] Implement and export `fadeIn` variant
-- [ ] Implement Reduced Motion Hook (AC: 8-10)
-  - [ ] Create `src/hooks/useReducedMotion.ts`
-  - [ ] Implement detection logic using `window.matchMedia`
-  - [ ] Add event listener for preference changes
-- [ ] Create Unit Tests (AC: 8)
-  - [ ] Create `src/hooks/useReducedMotion.test.ts` to verify hook logic
-- [ ] Verify System (AC: 1, 11)
-  - [ ] Ensure `framer-motion` is installed (check package.json)
-  - [ ] Verify type safety for exported variants
+- [x] Implement Motion Variants (AC: 3-7, 12)
+  - [x] Create `src/lib/motion.ts`
+  - [x] Implement and export `fadeInUp` variant
+  - [x] Implement and export `staggerContainer` variant
+  - [x] Implement and export `scaleOnHover` variant
+  - [x] Implement and export `fadeIn` variant
+- [x] Implement Reduced Motion Hook (AC: 8-10)
+  - [x] Create `src/hooks/useReducedMotion.ts`
+  - [x] Implement detection logic using `window.matchMedia`
+  - [x] Add event listener for preference changes
+- [x] Create Unit Tests (AC: 8)
+  - [x] Create `src/hooks/useReducedMotion.test.ts` to verify hook logic
+- [x] Verify System (AC: 1, 11)
+  - [x] Ensure `framer-motion` is installed (check package.json)
+  - [x] Verify type safety for exported variants
+
+- [ ] Review Follow-ups (AI)
+  - [x] [AI-Review][High] Lint Error: `react-hooks/set-state-in-effect` in `useReducedMotion.ts` [src/hooks/useReducedMotion.ts:12]
+  - [x] [AI-Review][Medium] Missing Tests: `src/lib/motion.ts` variants are not unit tested [src/lib/motion.ts]
+  - [x] [AI-Review][Medium] Magic Numbers: Animation durations in `motion.ts` are hardcoded [src/lib/motion.ts]
+  - [x] [AI-Review][Low] Documentation: No usage examples or guide for animation system
+
+- [ ] Review Follow-ups (AI) - Round 2
+  - [x] [AI-Review][Medium] Test Quality: Refactor `motion.test.ts` to test behavior/properties instead of snapshots [src/lib/motion.test.ts]
+  - [x] [AI-Review][Medium] Missing Tests: Add tests for `ANIMATION` constants [src/lib/motion.ts]
+  - [x] [AI-Review][Medium] Architecture Deviation: Add `ease: 'easeOut'` to `fadeIn` variant [src/lib/motion.ts]
+  - [x] [AI-Review][Medium] Incomplete Testing: Verify `removeEventListener` cleanup in `useReducedMotion.test.ts` [src/hooks/useReducedMotion.test.ts]
+  - [x] [AI-Review][Low] Documentation: Add usage examples for `whileInView` [src/lib/motion.ts]
+
 
 ## Dev Notes
 
@@ -87,12 +101,29 @@ Status: ready-for-dev
 
 ### Completion Notes List
 
-- [ ] Motion library implemented
-- [ ] Hook implemented
-- [ ] Tests passed
+- [x] Motion library implemented
+- [x] Hook implemented
+- [x] Tests passed
+- [x] Installed `vitest` and `@testing-library/react` for unit testing.
+- [x] Resolved review finding [High]: Lint Error: react-hooks/set-state-in-effect in useReducedMotion.ts
+- [x] Resolved tests for motion variants.
+- [x] Refactored magic numbers in motion.ts.
+- [x] Added JSDoc documentation with examples to motion.ts.
+- [x] Resolved all Round 2 review findings:
+  - [x] Refactored `motion.test.ts` to be property-based.
+  - [x] Added tests for `ANIMATION` constants.
+  - [x] Fixed `fadeIn` variant easing.
+  - [x] Added cleanup test for `useReducedMotion`.
+  - [x] Enhanced `whileInView` documentation.
+  - [x] Resolved Round 3 findings:
+    - [x] Improved type safety in `src/lib/motion.test.ts`.
+    - [x] Fixed global `window` hygiene in `src/hooks/useReducedMotion.test.ts`.
 
 ### File List
 
 - src/lib/motion.ts
 - src/hooks/useReducedMotion.ts
 - src/hooks/useReducedMotion.test.ts
+- src/lib/motion.test.ts
+- vitest.config.ts
+- package.json
